@@ -1,0 +1,185 @@
+.principles-container{
+    width: 100%;
+    padding: 0 30px;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+.principles-wrapper{
+    display: flex;
+    gap:50px;
+}
+.principles-images{
+   width: 550px;
+   height: 550px;
+   flex-shrink: 0;
+   border-top: 8px solid rgba(219, 102, 102,0.6);
+   border-right: 8px solid rgba(219, 102, 102,0.6);
+   border-bottom: 8px solid rgba(98, 181, 223,0.6);
+   border-left: 8px solid rgba(98, 181, 223,0.6);
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+}
+.principles-images img{
+    display: none;
+}
+.principles-images img:first-of-type{
+    position: absolute;
+    display: inline-block;
+    width: 70%;
+    height: 70%;
+    bottom: 40%;
+    left: -6px;
+}
+.principles-images img:last-of-type{
+    position: absolute;
+    display: inline-block;
+    width: 70%;
+    height: 70%;
+    bottom: -8px;
+    right: -6px;
+    transform: translate(40px,0);
+}
+.principles-images p{
+    align-self:baseline;
+    font-size: 60px;
+    color: red;
+    font-weight: 700;
+    text-align: center;
+    margin-left: 35px;
+    margin-bottom: 50px;
+}
+.principles-container span{
+    display: block;
+    color: black;
+    font-size: 14px;
+}
+.principles-content{
+    width: 50%;
+}
+.principles-content h1{
+    font-size: 18px;
+    color: red;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.principles-content h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.principles-content > p{
+    line-height: 1.8;
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 25px;
+}
+.principles-content .tags{
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.principles-content .tags p{
+    display: flex;
+    width: calc( 50% - 20px );
+    font-size: 16px;
+    color: #555555;
+    font-weight: 700;
+    align-items: center;
+}
+.tags p span{
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    color: red;
+    font-size: 20px;
+}
+#serviceBtn{
+    color: white;
+    background-color: red;
+    font-size: 15px;
+    padding: 10px 19px;
+    width: max-content;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid red;
+    transition: all 0.5s;
+}
+#serviceBtn:hover{
+    color: red;
+    background-color: transparent;
+}
+#serviceBtn a{
+    text-decoration: none;
+    color: inherit;
+}
+@media screen and (max-width: 1100px) {
+    .principles-images{
+        width: 450px;
+        height: 450px;
+    }
+    .principles-content .tags p{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 970px) {
+    .principles-container{
+        margin-top: 50px;
+    }
+    .principles-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .principles-images{
+        width: 550px;
+        height: 500px;
+    }
+    .principles-content{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .principles-images{
+        width: 100%;
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .principles-images p{
+        align-self:baseline;
+        font-size: 40px;
+        color: red;
+        font-weight: 700;
+        text-align: center;
+        margin-left: 10px;
+        margin-bottom: 30px;
+    }
+    .principles-content h3{
+        font-size: 30px;
+    }
+    .principles-content p,
+    .principles-content .tags p{
+        font-size: 14px;
+    }
+    #serviceBtn{
+     padding: 8px;
+     font-size: 14px;
+    }
+}
+@media screen and (max-width: 530px){
+    .principles-images img:first-of-type{
+        width: 60%;
+        height: 60%;
+        top:-6px;
+    }
+    .principles-images img:last-of-type{
+        width: 60%;
+        height: 60%;
+        transform: translate(0px,0);
+    }
+    .principles-images p{
+        width: 100px;
+    }
+}

@@ -1,0 +1,117 @@
+.ourServices-container{
+    width:100%;
+    padding: 0 30px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+.ourServices-wrapper h1{
+    font-size: 18px;
+    color: red;
+    font-weight: 400;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.ourServices-cards{
+    display: flex;
+    gap:30px;
+}
+.ourServices-card{
+    width: calc(35% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(230, 225, 225);
+    padding: 30px 40px;
+    text-align:center;
+    border-radius: 15px;
+    justify-content: space-between;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.ourServices-card:hover{
+    transform: translateY(-5px);
+}
+.ourServices-card:hover .icons::before{
+    content: '';
+    position: absolute;
+    background-image: url('../../../assets/icon2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: rotate 0.5s linear forwards;
+}
+@keyframes rotate{
+    0%{
+        transform: rotateY(270deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.ourServices-card .icons{
+    position: relative;
+    margin-bottom: 30px;
+}
+.ourServices-card .icons span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+}
+.ourServices-card h3{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.ourServices-card p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.ourServices-card a{
+    color: red;
+    text-decoration: none;
+    font-size: 15px;
+}
+.ourServices-card a:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width: 970px) {
+    .ourServices-cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ourServices-card{
+        width: calc(48% - 30px);
+    }
+}
+@media screen and (max-width: 800px) {
+    .ourServices-cards{
+        flex-direction: column;
+    }
+    .ourServices-card{
+        width: 100%;
+    }
+    .ourServices-card .icons{
+        width: 100px;
+        height: 70px;
+    }
+    .ourServices-card .icons img{
+        width: 100%;
+        height: 100%;
+    }
+    .ourServices-card h3{
+        font-size: 18px;
+    }
+    .ourServices-card p,
+    .ourServices-card a{
+        font-size: 14px;
+    }
+    .ourServices-card:hover .icons::before{
+        width: 100%;
+        height: 100%;
+    }
+}

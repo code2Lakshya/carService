@@ -1,0 +1,184 @@
+.team-container {
+    width: 100%;
+    margin-block: 80px;
+    padding: 0 30px;
+}
+
+.team-heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team-heading h1 {
+    font-size: 18px;
+    color: red;
+    font-weight: 400;
+}
+
+.team-heading p {
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.team-cards {
+    display: grid;
+    gap: 50px;
+    margin-bottom: 80px;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+}
+
+.team-card {
+    max-width: 450px;
+    aspect-ratio: 1/0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.team-card img {
+    width: 100%;
+    object-position: center;
+}
+
+.team-card ul {
+    display: none;
+    position: absolute;
+    list-style: none;
+    font-size: 30px;
+    color: white;
+}
+
+.team-card ul a {
+    color: inherit;
+}
+
+.team-card ul li {
+    transition: transform 0.5s;
+}
+
+.team-card ul li:hover {
+    transform: translateY(-2px);
+}
+
+.team-card:hover ul {
+    display: flex;
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 50%, 100% 100%, 0% 100%);
+    background-color: rgb(228, 23, 23, 0.5);
+    width: 100%;
+    padding: 70px 20px 10px;
+    justify-content: center;
+    gap: 20px;
+    bottom: 0;
+    left: 0;
+    animation: slider 0.4s linear forwards;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.team-counter-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+
+.counter-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.counter-card:hover {
+    transform: translateY(-4px);
+}
+
+.counter-card p:nth-child(1) {
+    width: 100px;
+    height: 55px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    margin-bottom: 12px;
+    color: red;
+}
+
+.counter-card p:nth-child(1) span {
+    padding: 0 10px;
+    background-color: white;
+    transform: translateY(10px);
+}
+
+.counter-card p:nth-child(2),
+.counter-card span:nth-child(2) {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.counter-card h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 800px) {
+    .team-heading h1 {
+        font-size: 14px;
+    }
+
+    .team-heading p {
+        font-size: 30px;
+    }
+
+    .counter-card p:nth-child(1) {
+        width: 70px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .counter-card p:nth-child(2),
+    .counter-card span:nth-child(2) {
+        font-size: 18px;
+    }
+    .counter-card h3 {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .team-cards{
+       grid-template-columns: unset;
+    }
+    .team-card{
+        width: 100%;
+    }
+    .team-card:hover ul {
+        clip-path: unset;
+        -webkit-clip-path: unset;
+        height: 100%;
+        align-items: center;
+        padding: unset;
+        font-size: 25px;
+    }
+    .team-counter-cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .counter-card h3{
+        text-align: center;
+    }
+}

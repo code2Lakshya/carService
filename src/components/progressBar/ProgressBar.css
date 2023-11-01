@@ -1,0 +1,40 @@
+.progress-bar{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.progress-bar  p{
+    font-size: 17px;
+    color: black;
+    font-weight: 400;
+}
+.progress{
+    display: flex;
+    margin-top: 10px;
+}
+.progress p{
+    height: 6px;
+    position: relative;
+}
+#bar span{
+    position: absolute;
+    right: 0;
+    top:0;
+    transform: translateY(calc(-100% - 10px));
+}
+#bar{
+    background-color: red;
+}
+#bar::before{
+    content:'';
+    position: absolute;
+    right: 0;
+    height: 20px;
+    top: 0;
+    transform: translateY(-35%);
+    width: 4px;
+    background-color: red;
+    border-radius: 10px;
+}
+.progress p:nth-child(2){
+    background-color: rgb(223, 220, 220);
+}
