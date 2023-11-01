@@ -3,19 +3,19 @@ import { AiOutlineClockCircle, AiOutlineInstagram, AiOutlineWhatsApp, AiOutlineM
 import { BiLogoFacebook } from 'react-icons/bi';
 import { FiTwitter } from 'react-icons/fi';
 import './Navbar.css';
-import {  Link } from 'react-router-dom';
+import {  Link, NavLink, useLocation } from 'react-router-dom';
 import { useContext, useState } from "react";
 import { AppContext } from "../../utils/AppContext";
 
 const Navbar = () => {
 
+    const location=useLocation();
     const {setForm} = useContext(AppContext);
-    const [currentTab, setCurrentTab] = useState('Home');
+    const {currentTab, setCurrentTab} = useContext(AppContext)
     const [menu, setMenu] = useState(false);
 
-
     const clickHandler = (e) => {
-        setCurrentTab(e.target.innerText);
+        setCurrentTab(e.target.innerText==='Contact Us'? 'Contact': e.target.innerText);
         setMenu(false);
         setForm(false);
     }
@@ -52,35 +52,35 @@ const Navbar = () => {
             <div className="padding nav">
                 <Wrapper>
                     <nav>
-                        <p><Link to='/'>Brand Logo</Link></p>
-                        <ul className={`nav-list ${menu ? 'active' : ''}`}>
+                        <p>Brand Logo</p>
+                        <ul className={`nav-list ${menu  ? 'active' : ''}`}>
 
                             <li
                                 onClick={clickHandler}
                                 className={currentTab === 'Home' ? 'active' : ''}
                             >
-                                <Link to='/'>Home</Link>
+                                <NavLink to='/'>Home</NavLink>
                             </li>
 
                             <li
                                 onClick={clickHandler}
                                 className={currentTab === 'About' ? 'active' : ''}
                             >
-                                <Link to='/about'>About</Link>
+                                <NavLink to='/About'>About</NavLink>
                             </li>
 
                             <li
                                 onClick={clickHandler}
                                 className={currentTab === 'Services' ? 'active' : ''}
                             >
-                                <Link to='/services'>Services</Link>
+                                <NavLink to='/Services'>Services</NavLink>
                             </li>
 
                             <li
                                 onClick={clickHandler}
-                                className={currentTab === 'Contact Us' ? 'active' : ''}
+                                className={currentTab === 'Contact' ? 'active' : ''}
                             >
-                                <Link to='/contact'>Contact Us</Link>
+                                <NavLink to='/Contact'>Contact Us</NavLink>
                             </li>
 
                             <li

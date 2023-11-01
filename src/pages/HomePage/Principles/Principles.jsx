@@ -2,11 +2,18 @@ import src1 from '../../../assets/whyUS.jpeg';
 import src2 from '../../../assets/whyUs2.jpeg';
 import { AiOutlineFileDone } from 'react-icons/ai';
 import './Principles.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Wrapper from '../../../components/Wrapper/Wrapper';
+import { useContext } from 'react';
+import { AppContext } from '../../../utils/AppContext';
 
 const Principles = () => {
-
+const {setCurrentTab}=useContext(AppContext);
+const navigate=useNavigate();
+const clickHandler=()=>{
+    setCurrentTab('Services');
+    navigate('/Services')
+}
     return (
         <div className="principles-container">
             <Wrapper className={'principles-wrapper'}>
@@ -29,7 +36,7 @@ const Principles = () => {
                         <p><span><AiOutlineFileDone /></span>Parmanent Driver</p>
                         <p><span><AiOutlineFileDone /></span>Driver For Outstation Trip</p>
                     </div>
-                   <span id='serviceBtn'><Link to='/services'>View All Services</Link></span> 
+                   <span id='serviceBtn' onClick={clickHandler}>View All Services</span> 
                 </div>
             </Wrapper>
         </div>

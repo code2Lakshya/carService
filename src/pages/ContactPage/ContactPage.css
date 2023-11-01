@@ -1,0 +1,13 @@
+.contact-page-container{
+    padding-top: 127px;
+}
+@media screen and (max-width:800px) {
+    .contact-page-container{
+        padding-top: 106.5px;
+    }
+}
+@media screen and (max-width:710px) {
+    .contact-page-container{
+        padding-top: 63px;
+    }
+}
