@@ -1,7 +1,12 @@
+import { useEffect } from 'react';
 import './Loader.css';
 
 
 const Loader = () => {
+
+useEffect(()=>{
+window.scrollTo(0,0);
+},[])
 
     return (
         <div className="loader">
