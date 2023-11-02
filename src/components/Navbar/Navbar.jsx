@@ -3,19 +3,19 @@ import { AiOutlineClockCircle, AiOutlineInstagram, AiOutlineWhatsApp, AiOutlineM
 import { BiLogoFacebook } from 'react-icons/bi';
 import { FiTwitter } from 'react-icons/fi';
 import './Navbar.css';
-import {  Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useContext, useState } from "react";
 import { AppContext } from "../../utils/AppContext";
 
 const Navbar = () => {
 
-    const location=useLocation();
-    const {setForm} = useContext(AppContext);
-    const {currentTab, setCurrentTab} = useContext(AppContext)
+    const location = useLocation();
+    const { setForm } = useContext(AppContext);
+    const { currentTab, setCurrentTab } = useContext(AppContext)
     const [menu, setMenu] = useState(false);
 
     const clickHandler = (e) => {
-        setCurrentTab(e.target.innerText==='Contact Us'? 'Contact': e.target.innerText);
+        setCurrentTab(e.target.innerText === 'Contact Us' ? 'Contact' : e.target.innerText);
         setMenu(false);
         setForm(false);
     }
@@ -52,8 +52,8 @@ const Navbar = () => {
             <div className="padding nav">
                 <Wrapper>
                     <nav>
-                        <p>Brand Logo</p>
-                        <ul className={`nav-list ${menu  ? 'active' : ''}`}>
+                        <p onClick={()=> setCurrentTab('Home')}><Link to='/'>Brand Logo</Link></p>
+                        <ul className={`nav-list ${menu ? 'active' : ''}`}>
 
                             <li
                                 onClick={clickHandler}
@@ -83,10 +83,10 @@ const Navbar = () => {
                                 <NavLink to='/Contact'>Contact Us</NavLink>
                             </li>
 
-                            <li
+                            {/*  <li
                                 id='book'
                                 onClick={formHandler}
-                            >Book Your Car</li>
+                            >Book Your Car</li> */}
                         </ul>
                         {
                             !menu ?

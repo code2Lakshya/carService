@@ -110,7 +110,7 @@ nav ul li a {
     text-decoration: none;
     padding-block: 30px;
 }
-nav ul li:last-of-type{
+nav ul #book{
     padding-block: 30px;
 }
 
@@ -170,11 +170,11 @@ nav ul li:hover::before {
         padding-block: 0;
     }
     nav ul li ,
-    nav ul li:last-of-type{
+    nav ul #book{
         padding: 15px 30px;
         border-bottom: 1px solid grey;
     }
-    nav ul li:last-of-type{
+    nav ul #book{
         border-bottom: 0;
     }
 

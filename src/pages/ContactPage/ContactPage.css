@@ -1,49 +1,146 @@
-.contact-page-container{
+.contact-page-container {
     padding-top: 127px;
 }
-.contact-page-hero{
+
+.contact-page-hero {
     background-image: url('../../assets/contact.jpeg');
 }
-.contact-details{
+
+.contact-details {
     width: 100%;
     padding: 0 30px;
-    margin-block: 120px;
+    margin-block: 60px;
 }
-.contact-details-wrapper{
+
+.contact-details-wrapper {
     display: flex;
-    gap:50px;
+    gap: 50px;
+    justify-content: space-between;
 }
-.form{
+
+.form {
     width: calc(50% - 50px);
-    max-width: 600px;
+    max-width: 550px;
+    flex-shrink: 1;
 }
-.form h1{
-    margin-bottom: 100px;
+
+.contact-address {
+    width: calc(50% - 50px);
+    flex-shrink: 1;
 }
-.contact-adress{
-    width:  calc(50% - 50px);
-}
-.contact-address h1{
+
+.contact-address h1 {
     font-size: 35px;
     line-height: 1.2;
     font-weight: 700;
     border-bottom: 1px dotted grey;
     margin-bottom: 6px;
 }
-.contact-address > p{
+
+.contact-address>p {
     font-size: 16px;
     line-height: 1.6;
     color: #555555;
     margin-bottom: 30px;
 }
 
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.contact-header span:nth-child(1) {
+    font-size: 25px;
+    color: red;
+    display: flex;
+    align-items: center;
+}
+
+.contact-header span:nth-child(2),
+.social-links p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact-card>p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+    padding-left: 30px;
+}
+
+.social-links {
+    padding-left: 30px;
+}
+
+.links {
+    display: flex;
+    gap: 7px;
+    margin-top: 5px;
+}
+
+.social-links .links a {
+    font-size: 16px;
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.social-links .links a:hover {
+    color: white;
+    background-color: red;
+}
+
+@media screen and (max-width: 900px) {
+    .contact-details-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-address,
+    .form {
+        width: 100%;
+        max-width: 600px;
+    }
+
+}
+
 @media screen and (max-width:800px) {
-    .contact-page-container{
+    .contact-page-container {
         padding-top: 106.5px;
     }
+
+    .contact-address h1 {
+        font-size: 25px;
+    }
+
+    .contact-card>p {
+        font-size: 15px;
+    }
+
+    .contact-header span:nth-child(2),
+    .social-links p {
+        font-size: 16px;
+    }
+
 }
+
 @media screen and (max-width:710px) {
-    .contact-page-container{
+    .contact-page-container {
         padding-top: 63px;
     }
 }

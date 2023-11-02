@@ -9,11 +9,11 @@ const Accordian = ({ accordian, setAccordian, index, details, heading }) => {
     const [active, setActive] = useState(false);
 
     const clickHandler = () => {
-        if (accordian === index && active) {
+        if (accordian === index) {
             setActive(false);
             setAccordian(null);
         }
-        if ((accordian !== index || accordian) && !active) {
+        if (accordian !== index) {
             setActive(true);
             setAccordian(index);
         }
@@ -26,7 +26,7 @@ const Accordian = ({ accordian, setAccordian, index, details, heading }) => {
                     <span className={accordian}>0{index}.</span>
                     <span className={accordian}>{heading}</span>
                 </p>
-                {!active ?
+                {!active || accordian !== index ?
                     <span className='add'><IoMdAdd /></span> :
                     <span className='add'><IoRemoveSharp /></span>}
             </div>

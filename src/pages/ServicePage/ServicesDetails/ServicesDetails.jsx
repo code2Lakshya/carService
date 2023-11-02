@@ -16,9 +16,9 @@ const ServicesDetails = () => {
                     <h1>Price List</h1>
                     <p>Just find your answers below</p>
                     <div className="accordian-container">
-                        <Accordian accordian={accordian} setAccordian={setAccordian} index={1} details={['charges', 'charges', 'charges', 'charges']} heading='Charges List 1' />
-                        <Accordian accordian={accordian} setAccordian={setAccordian} index={2} details={['charges', 'charges', 'charges', 'charges']} heading='Charges List 2' />
-                        <Accordian accordian={accordian} setAccordian={setAccordian} index={3} details={['charges', 'charges', 'charges', 'charges']} heading='Charges List 3' />
+                        <Accordian accordian={accordian} setAccordian={setAccordian} index={1} details={['charges', 'charges', 'charges', 'charges']} heading='Charges List 1' key={1}/>
+                        <Accordian accordian={accordian} setAccordian={setAccordian} index={2} details={['charges', 'charges', 'charges', 'charges']} heading='Charges List 2' key={2}/>
+                        <Accordian accordian={accordian} setAccordian={setAccordian} index={3} details={['charges', 'charges', 'charges', 'charges']} heading='Charges List 3' key={3}/>
                     </div>
                 </div>
                 <DetailsForm  className='details-form-item' /> 

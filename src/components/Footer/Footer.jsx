@@ -16,7 +16,6 @@ const {setCurrentTab}=useContext(AppContext);
         const {isLoaded}=useLoadScript({
             googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
         })
-        console.log(process.env.REACT_APP_GOOGLE_API_KEY)
 
     return (
         <footer>

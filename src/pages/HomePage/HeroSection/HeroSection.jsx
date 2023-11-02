@@ -48,28 +48,28 @@ const HeroSection = () => {
                         <p>Our Car Rental Service is a professional driver service agency</p>
                         <button>Book Now</button>
                     </div>
-                    <img src={car1} alt='car1' />
+                    <img src={car1} alt='car1' loading='lazy'/>
                 </div>
                 <div className={`hero-card ${card === 1 ? 'active' : 'in-active'}`}>
                     <div className='content'>
                         <p>Best Car Drive Center in Kolkata</p>
                         <button>Book Now</button>
                     </div>
-                    <img src={car2} alt='car1' />
+                    <img src={car2} alt='car2' loading='lazy' />
                 </div>
                 <div className={`hero-card ${card === 2 ? 'active' : 'in-active'}`}>
                     <div className='content'>
                         <p>Our Car Rental Service is a professional driver service agency</p>
                         <button>Book Now</button>
                     </div>
-                    <img src={car3} alt='car1' />
+                    <img src={car3} alt='car3' loading='lazy'/>
                 </div>
                 <div className={`hero-card ${card === 3 ? 'active' : 'in-active'}`}>
                     <div className='content'>
                         <p>Best Car Drive Center in Kolkata</p>
                         <button>Book Now</button>
                     </div>
-                    <img src={car4} alt='car1' />
+                    <img src={car4} alt='car4'  loading='lazy'/>
                 </div>
             </div>
             <div className='hero-btn'>
