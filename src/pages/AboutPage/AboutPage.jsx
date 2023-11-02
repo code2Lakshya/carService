@@ -1,4 +1,3 @@
-import { Link, NavLink } from 'react-router-dom';
 import './AboutPage.css';
 import aboutImg1 from '../../assets/aboutHero.png';
 import aboutImg2 from '../../assets/aboutHero2.png';
