@@ -105,7 +105,7 @@
     background-color: red;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:970px) {
     .contact-details-wrapper {
         flex-direction: column;
         align-items: center;
