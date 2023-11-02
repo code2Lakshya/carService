@@ -1,6 +1,9 @@
 .contact-page-container{
     padding-top: 127px;
 }
+.contact-page-hero{
+    background-image: url('../../assets/contact.jpeg');
+}
 @media screen and (max-width:800px) {
     .contact-page-container{
         padding-top: 106.5px;

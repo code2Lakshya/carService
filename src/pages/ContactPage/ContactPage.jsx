@@ -16,7 +16,7 @@ const ContactPage = () => {
 
     return (
         <div className="contact-page-container">
-            <HeroSectiono heading='Contact Us' to='Contact' />
+            <HeroSectiono heading='Contact Us' to='Contact' className='contact-page-hero'/>
         </div>
     );
 }

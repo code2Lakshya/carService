@@ -46,3 +46,11 @@
 .btn a.active{
     color: red;
 }
+@media screen and (max-width: 800px) {
+    .about-page-hero{
+        height: 70vh;
+    }
+    .about-page-hero h1{
+        font-size: 30px;
+    }
+}

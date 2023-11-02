@@ -3,12 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import { AppContext } from "../../utils/AppContext";
 import './HeroSectiono.css';
 
-const HeroSectiono=({heading,to})=>{
+const HeroSectiono=({heading,to,className})=>{
 
     const {setCurrentTab}=useContext(AppContext);
 
     return(
-        <div className='about-page-hero'>
+        <div className={`about-page-hero ${className ? className:''}`}>
         <h1>{heading}</h1>
         <div className='btn'>
             <span onClick={()=>setCurrentTab('Home')}><Link to='/'>Home</Link></span>
