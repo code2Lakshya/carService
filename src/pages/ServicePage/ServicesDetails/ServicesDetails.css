@@ -34,7 +34,7 @@
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 970px) {
     .details-wrapper {
         flex-direction: column;
         align-items: center;

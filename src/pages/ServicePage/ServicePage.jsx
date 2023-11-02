@@ -44,11 +44,11 @@ const ServicePage = () => {
                     <div className="terms-content">
                         <h1>[Brand Name] T&C</h1>
                         <p>This policy was last updated October 10, 2023.</p>
-                        <ol type='1' start='1'>
+                        <ul>
                             {
-                                variable.map((item, index) => <li key={index}>{item}</li>)
+                                variable.map((item, index) => <li key={index}>{`${index+1}. ${item}`}</li>)
                             }
-                        </ol>
+                        </ul>
                     </div>
                     <div className="carousel">
                         <div className="carousel-cards">
