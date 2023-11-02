@@ -25,7 +25,7 @@ setCurrentTab('About');
 
     return (
         <div className="about-page-container">
-           <HeroSectiono heading='About' to='About' />
+           <HeroSectiono heading='About' to='About' className='about-hero-image'/>
             <div className='main-principles'>
                 <Wrapper className='main-principles-wrapper'>
                     <div className='main-left'>
