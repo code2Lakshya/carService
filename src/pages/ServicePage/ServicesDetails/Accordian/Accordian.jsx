@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { GrFormAdd } from 'react-icons/gr';
 import { IoRemoveSharp } from 'react-icons/io5';
-
+import { IoMdAdd } from 'react-icons/io';
+import './Accordian.css';
 
 
 const Accordian = ({ accordian, setAccordian, index, details, heading }) => {
@@ -21,16 +21,16 @@ const Accordian = ({ accordian, setAccordian, index, details, heading }) => {
 
     return (
         <div className="accordian">
-            <div className="header">
+            <div className="header" onClick={clickHandler}>
                 <p>
                     <span className={accordian}>0{index}.</span>
                     <span className={accordian}>{heading}</span>
                 </p>
                 {!active ?
-                    <span onClick={clickHandler}><GrFormAdd /></span> :
-                    <span onClick={clickHandler}><IoRemoveSharp /></span>}
+                    <span className='add'><IoMdAdd /></span> :
+                    <span className='add'><IoRemoveSharp /></span>}
             </div>
-            <div className={accordian === index ? 'active' : ''}>
+            <div className={`accordian-dropdown ${accordian === index ? 'active' : ''}`}>
                 {details.map((item, index) => <p key={index}>{item}</p>)}
             </div>
         </div>

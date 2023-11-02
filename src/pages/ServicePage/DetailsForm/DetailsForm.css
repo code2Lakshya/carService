@@ -1,0 +1,60 @@
+.details-form{
+    width: 100%;
+}
+.details-form h1 {
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 50px;
+    border-bottom: 1px dotted grey;
+}
+
+.details-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.details-form .input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    outline: none;
+}
+.input::placeholder{
+    font-size: 16px;
+}
+
+#message {
+    resize: none;
+    min-height: 100px;
+}
+
+.details-form button {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    width: 150px;
+    background-color: red;
+    border: 1px solid red;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 20px;
+    color: white;
+}
+
+.details-form button:hover {
+    background-color: transparent;
+    color: red;
+}
+
+@media screen and (max-width: 800px) {
+    .details-form h1{
+        font-size: 25px;
+    }
+    .details-form .input,
+    .input::placeholder {
+        font-size: 15px;
+    }
+}

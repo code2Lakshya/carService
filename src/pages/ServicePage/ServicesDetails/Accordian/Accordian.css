@@ -1,0 +1,37 @@
+.accordian .header{
+    background-color: rgb(225, 223, 223);
+    padding:7px 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+    border-bottom: 1px dotted black;
+    user-select: none;
+}
+.header p{
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 600;
+    display: flex;
+    gap:10px;
+}
+.header .add{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    transition: color 0.5s;
+}
+.add:hover{
+    color:red;
+}
+.accordian-dropdown{
+    background-color: rgba(225, 223, 223,0.3);
+    padding:7px 20px;
+    font-size: 16px;
+    font-weight: 400;
+   display: none;
+}
+.accordian-dropdown.active{
+    display: block;
+}
