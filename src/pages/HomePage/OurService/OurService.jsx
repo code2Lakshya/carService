@@ -9,7 +9,7 @@ import { useContext } from 'react';
 import { AppContext } from '../../../utils/AppContext';
 
 
-const OurService = () => {
+const OurService = ({readmore}) => {
 
     const {setCurrentTab}=useContext(AppContext);
 
@@ -28,7 +28,7 @@ const OurService = () => {
                         <p>
                             We have a fleet of cars that include small luxury cars to premium category CARS.
                         </p>
-                        <span onClick={()=> setCurrentTab('Services')}><Link to='/Services'>Read More</Link></span>
+                        { !readmore && <span onClick={()=> setCurrentTab('Services')}><Link to='/Services'>Read More</Link></span>}
                     </div>
                     <div className="ourServices-card" >
                         <div className="icons">
@@ -39,7 +39,7 @@ const OurService = () => {
                         <p>
                             Our uniformed are experienced, trained drivers doubles as your friend.
                         </p>
-                        <span onClick={()=> setCurrentTab('Services')}><Link to='/Services'>Read More</Link></span>
+                        { !readmore && <span onClick={()=> setCurrentTab('Services')}><Link to='/Services'>Read More</Link></span>}
                     </div>
                     <div className="ourServices-card" >
                         <div className="icons">
@@ -50,7 +50,7 @@ const OurService = () => {
                         <p>
                             we also have a strong back-up support along with 24 x 7.
                         </p>
-                        <span onClick={()=> setCurrentTab('Services')}><Link to='/Services'>Read More</Link></span>
+                        { !readmore && <span onClick={()=> setCurrentTab('Services')}><Link to='/Services'>Read More</Link></span>}
                     </div>
                 </div>
             </Wrapper>

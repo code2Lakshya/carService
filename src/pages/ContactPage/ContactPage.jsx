@@ -22,7 +22,7 @@ const ContactPage = () => {
             <HeroSectiono heading='Contact Us' to='Contact' className='contact-page-hero' />
             <div className="contact-details">
                 <Wrapper className='contact-details-wrapper'>
-                    <DetailsForm className='form' />
+                    <DetailsForm className='form' include='true' />
                     <div className="contact-address">
                         <h1>Our Contact Details</h1>
                         <p>

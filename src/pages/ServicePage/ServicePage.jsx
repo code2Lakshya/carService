@@ -38,7 +38,7 @@ const ServicePage = () => {
     return (
         <div className="service-page-container">
             <HeroSectiono heading='Services' to='Services' className='hero-section-services' />
-            <OurService />
+            <OurService readmore='true' />
             <div className="terms-container">
                 <Wrapper className='terms-container-wrapper'>
                     <div className="terms-content">
