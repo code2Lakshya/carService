@@ -12,7 +12,7 @@ const DetailsForm = ({ include, className }) => {
     }
     const submitHandler = (e) => {
         e.preventDefault();
-        setUserInput({ name: '', email: '', message: '' });
+        setUserInput({ name: '', email: '', message: '' ,subject: ''});
     }
 
     return (
